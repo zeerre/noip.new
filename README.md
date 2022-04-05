@@ -5,7 +5,7 @@
 ```
 ## fork 本地的远程仓库
 
-注册 Github 并登陆，打开本仓库（github 全站搜索 zeerre/NOIP），点击 `Fork`。
+注册 Github 并登陆，打开本仓库（github 全站搜索 zeerre/noip.new），点击 `Fork`。
 
 ## 创建本地与远程仓库的 ssh 公钥
 
@@ -25,7 +25,7 @@
 ## 克隆远程仓库到本地并同步远程仓库（到本地）
 
 ```
-    git clone git@github.com:yourname/NOIP.git 
+    git clone git@github.com:yourname/noip.new.git 
     cd NOIP
     git config user.name "yourname"
     git config user.email "your_sign_up_email"
@@ -38,9 +38,9 @@
 ```
     git remote add NOIP https://github.com/zeerre/NOIP.git
     git fetch NOIP
-    git checkout master_backup
-    git merge NOIP/master_backup
-    git push origin master_backup
+    git branch you-branch-name
+    git merge NOIP/master
+    git push origin master
 
 ```
 
@@ -51,7 +51,7 @@
 ```
     git add .
     git commit -m "本次提交文件注释内容"
-    git push origin master_backup
+    git push origin master
 ```
 
 ## 提交向主仓库的 PR（pull requests)
@@ -66,4 +66,4 @@
 
 ## 本页面的说明：
 
-[请点击这里](https://zeerre.github.io/NOIP),了解关于 GitHub 远程仓库与本地仓库的简单管理的网页页面。祝好运！！！任何一种知识都不是一蹴而就的，扎扎实实一步一个脚印，我想会有一个圆满的结果！！！
+[请点击这里](https://zeerre.github.io/noip.new),了解关于 GitHub 远程仓库与本地仓库的简单管理的网页页面。祝好运！！！任何一种知识都不是一蹴而就的，扎扎实实一步一个脚印，我想会有一个圆满的结果！！！
