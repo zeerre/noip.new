@@ -6,18 +6,23 @@
 //*************************************************************************
 
 #include"stdio.h"
-#include<stdlib.h>
+#include<cmath>
 using namespace std;
+float Func(float,float);
 int main(){
-    printf("Are you ready to coding?\n Press y/n for yes/no;\n");
-    char tem;       
-    scanf("%c",&tem);       //键盘输入
-    int turn;      
-    turn=tem;    //转换变量为整形方便判断
-    if(turn==121)
-        printf("Hello,World!\n");
-    else
-        printf("Well,we're still waiting for you!\n");
-    system("pause");
-    return 0;
+    float x,n,outPut=0;
+    printf("Please input x&n:\n");
+    scanf("%f %f",&x,&n);
+    printf("The result is:\n %f",Func(x,n));
+    return 0;    
+}
+
+float Func(float x,float n){
+    float dataSpace;
+    int incrNum=0;
+    while(incrNum<=n){      //函数循环主体
+        incrNum+=1;
+        dataSpace=sqrt(x+incrNum);
+    }
+    return dataSpace;
 }
