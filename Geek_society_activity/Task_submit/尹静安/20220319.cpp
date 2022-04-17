@@ -5,19 +5,26 @@
 //* Created And Modified Time: ====2022-03-19  17-32-16====
 //*************************************************************************
 
+//Hermite Func
 #include"stdio.h"
-#include<stdlib.h>
 using namespace std;
+int Hn(int,int);
 int main(){
-    printf("Are you ready to coding?\n Press y/n for yes/no;\n");
-    char tem;       
-    scanf("%c",&tem);       //键盘输入
-    int turn;      
-    turn=tem;    //转换变量为整形方便判断
-    if(turn==121)
-        printf("Hello,World!\n");
-    else
-        printf("Well,we're still waiting for you!\n");
-    system("pause");
+    printf("Please input x&n:\n");
+    int x,n,sum=0;
+    scanf("%d %d",&x,&n);
+    sum+=Hn(x,n);
+    printf("The result is:\n %d",sum);
     return 0;
+}
+
+int Hn(int x,int y){
+    int tem;
+    if(y==0)
+        tem=1;
+    if(y==1)
+        tem=2*x;
+    if(y>1)
+        tem=2*x*Hn(x,y-1)-2*(y-1)*Hn(x,y-2);
+    return tem;
 }
