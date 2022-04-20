@@ -11,7 +11,10 @@ int ackman(int ,int);
 
 int main() {
     int m,n;
+    cout<<"请输入m和n（m<=3,n<=10):";
     cin>> m>> n;
+    // while(m>3 && n>10)
+    //     cin>>m>>n;
     cout<<ackman(m,n)<<endl;
     return 0;
 }
