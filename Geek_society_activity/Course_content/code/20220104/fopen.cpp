@@ -8,7 +8,9 @@
 #include<cstdio>
 using namespace std;
 int main(){
-    FILE *fin,*fout;   fin=stdin;   fout=stdout;
+    FILE *fin,*fout;
+    fin=stdin;
+    out=stdout;
     /*   本处语句同上   */
     freopen("in.txt","r",stdin);        //定义输入文件名
     freopen("out.txt","w",stdout);      //定义输出文件名
