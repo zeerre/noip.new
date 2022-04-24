@@ -1,25 +1,51 @@
 //
 
-#include"stdio.h"
-#include<cmath>
+#include<cstdio>
+#include<fstream>
 using namespace std;
-float Fuc(float,float,float);
+
+//方法一：文件输入输出流
+
 int main(){
-    float x,n;
-    printf("Please input x&n:\n");
-    scanf("%f %f",&x,&n);
-    printf("The result is:\n %f",Fuc(x,n,1));
+    ifstream inPut_1("in.txt");
+    ofstream outPut_1("out.txt");
+    int temp,result=0;
+    while (inPut_1>>temp)
+    {
+        result+=temp;
+    }
+    outPut_1<<result<<endl;
+    inPut_1.close();
+    outPut_1.close();
     return 0;
 }
 
-float Fuc(float x,float n,float countTimes){   //三个变量，分别是：x,n和从1递增到n的计数   
-    if(countTimes==n){
-        x=sqrt(x+n);
-        return x;
-    }   
-    else{
-        x=sqrt(x+countTimes);
-        countTimes++;
-        return Fuc(x,n,countTimes);
+//方法二：重定向
+
+void REopen(){
+    freopen("in.txt","r",stdin);
+    freopen("out.txt","w",stdout);
+    FILE *inPut_2=stdin,*outPut_2=stdout;
+    int temp_re,result_re=0;
+    while (fscanf(inPut_2,"%d",&temp_re)==1)
+    {
+        result_re+=temp_re;
     }
+    fprintf(outPut_2,"%d",result_re);
+    fclose(stdin);fclose(stdout);
+}
+
+//方法三：文件访问
+
+void open(){
+    FILE *inPut_3,*outPut_3;
+    inPut_3=fopen("in.txt","rb");
+    outPut_3=fopen("out.txt","wb");
+    int temp_o,result_o=0;
+    while (fscanf(inPut_3,"%d",&temp_o)==1)
+    {
+        result_o+=temp_o;
+    }
+    fprintf(outPut_3,"%d",result_o);
+    fclose(inPut_3);fclose(outPut_3);
 }
