@@ -13,6 +13,6 @@ do
 
 [ -d $(dir) ] 
 
-echo $(dir)/ | xargs -n 1 cp -v /home/noi/geek/gitproject/github/noip.new.ssh/Temp/shell_scripts_sources/20220422.md
+echo $(dir)/ | xargs -n 1 cp -v /home/noi/geek/gitproject/github/noip.new.ssh/Temp/shell_scripts_sources/20220427.cpp
 
 done
