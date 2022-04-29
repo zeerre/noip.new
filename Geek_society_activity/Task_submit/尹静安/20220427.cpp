@@ -1,51 +1,32 @@
 //
 
-#include<cstdio>
-#include<fstream>
-using namespace std;
-
-//方法一：文件输入输出流
-
+void fabonacci(int,int);
 int main(){
-    ifstream inPut_1("in.txt");
-    ofstream outPut_1("out.txt");
-    int temp,result=0;
-    while (inPut_1>>temp)
-    {
-        result+=temp;
+    FILE *inputNUM;
+    inputNUM=fopen("in.txt","rb");
+    int inputNum;
+    for (int i=1;i<=2;i++){
+        fscanf(inputNUM,"%d",&inputNum);    //小写尾缀是变量，大写尾缀是指针
+        arr_2[i]=inputNum;
     }
-    outPut_1<<result<<endl;
-    inPut_1.close();
-    outPut_1.close();
+    arr_1[1][1]=1;
+    fabonacci(arr_2[0],arr_2[1]);
     return 0;
 }
 
-//方法二：重定向
-
-void REopen(){
-    freopen("in.txt","r",stdin);
-    freopen("out.txt","w",stdout);
-    FILE *inPut_2=stdin,*outPut_2=stdout;
-    int temp_re,result_re=0;
-    while (fscanf(inPut_2,"%d",&temp_re)==1)
-    {
-        result_re+=temp_re;
+void fabonacci(int Hlmt,int Olmt){  //"H"为横行，"O"为纵列
+    int Htemp=2,Otemp=1;
+    while (Htemp<=Hlmt && Otemp<=Olmt){
+        if (Htemp==Otemp){
+            arr_1[Htemp][Otemp]=1;
+            Htemp+=1;
+            Otemp=1;
+        }
+        else{
+            arr_1[Htemp][1]=1;
+            arr_1[Htemp][Otemp]=arr_1[Htemp-1][Otemp-1]+arr_1[Htemp-1][Otemp];
+            Otemp+=1;
+        }
     }
-    fprintf(outPut_2,"%d",result_re);
-    fclose(stdin);fclose(stdout);
-}
-
-//方法三：文件访问
-
-void open(){
-    FILE *inPut_3,*outPut_3;
-    inPut_3=fopen("in.txt","rb");
-    outPut_3=fopen("out.txt","wb");
-    int temp_o,result_o=0;
-    while (fscanf(inPut_3,"%d",&temp_o)==1)
-    {
-        result_o+=temp_o;
-    }
-    fprintf(outPut_3,"%d",result_o);
-    fclose(inPut_3);fclose(outPut_3);
+    printf("The result is:\n %d",arr_1[Htemp][Otemp]);
 }
