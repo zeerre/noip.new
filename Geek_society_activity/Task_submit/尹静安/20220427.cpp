@@ -1,6 +1,5 @@
 //
 
-
 #include<cstdio>
 using namespace std;
 int arr_i[2];   //用于接收输入
