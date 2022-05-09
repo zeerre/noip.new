@@ -12,6 +12,6 @@ using namespace std;
 int main() {
     int x;
     std::cin>>x;
-    std::cout<<example(x)<<std::endl;
+    std::cout<<case_1(x)<<std::endl;
     return 0;
 }

@@ -10,6 +10,6 @@
 #define _FUNCTION_H
 
 //例如：
-int example(int);
+int case_1(int);
 
 #endif
