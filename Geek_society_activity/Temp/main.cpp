@@ -11,7 +11,8 @@
 using namespace std;
 int main() {
     int x;
+    CSimple simple;
     std::cin>>x;
-    std::cout<<case_1(x)<<std::endl;
+    std::cout<<simple.fibo(x)<<std::endl;
     return 0;
 }
