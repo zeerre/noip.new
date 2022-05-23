@@ -6,13 +6,11 @@
 //*************************************************************************
 
 #include <iostream>
-#include"function.h"
-
+#include "function.h"
 using namespace std;
-int main() {
-    int x;
-    CSimple simple;
-    std::cin>>x;
-    std::cout<<simple.fibo(x)<<std::endl;
+int main()
+{
+    lol LOL;
+    LOL.func();
     return 0;
 }

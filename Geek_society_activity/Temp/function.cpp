@@ -7,15 +7,10 @@
 
 // 请将函数体放到此文件中，函数的实现。
 
-#include<cstdio>
-#include"function.h"
+#include "stdio.h"
+#include "function.h"
 
-int CSimple::fibo(int temp)
+void lol::func()
 {
-    if (temp==0)
-        return 0;
-    else if (temp==1)
-        return 1;
-    else
-        return fibo(temp-1) + fibo(temp-2);
+    printf("测试\n");
 }

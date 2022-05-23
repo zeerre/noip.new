@@ -6,13 +6,12 @@
 //*************************************************************************
 // 自定义函数的头文件
 // 请将函数定义写在此文件中。
-#ifndef FIBONACCI_H
-#define FIBONACCI_H
+#ifndef f_H
+#define f_H
 
-class CSimple
+class lol
 {
     public:
-        int fibo(int temp);
+        void func();
 };
-
 #endif
