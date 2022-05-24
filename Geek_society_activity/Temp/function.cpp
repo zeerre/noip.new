@@ -7,9 +7,10 @@
 
 // 请将函数体放到此文件中，函数的实现。
 
+#include "stdio.h"
 #include "function.h"
-int example(int x){
-    return x; 
 
+void ex()
+{
+    printf("Congratulations,it works!\n");
 }
-

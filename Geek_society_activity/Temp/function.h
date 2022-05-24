@@ -6,10 +6,9 @@
 //*************************************************************************
 // 自定义函数的头文件
 // 请将函数定义写在此文件中。
-#ifndef _FUNCTION_H
-#define _FUNCTION_H
+#ifndef _FUNC_H
+#define _FUNC_H
 
-//例如：
-int example(int);
+void ex();
 
 #endif
