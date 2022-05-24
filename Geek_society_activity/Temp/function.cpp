@@ -10,7 +10,7 @@
 #include "stdio.h"
 #include "function.h"
 
-void lol::func()
+void ex()
 {
-    printf("测试\n");
+    printf("Congratulations,it works!\n");
 }

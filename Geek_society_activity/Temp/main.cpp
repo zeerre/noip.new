@@ -5,12 +5,11 @@
 //* Created And Modified Time: ====2022-05-09  07-46-03====
 //*************************************************************************
 
-#include <iostream>
 #include "function.h"
 using namespace std;
+
 int main()
 {
-    lol LOL;
-    LOL.func();
+    ex();
     return 0;
 }

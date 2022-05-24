@@ -6,12 +6,9 @@
 //*************************************************************************
 // 自定义函数的头文件
 // 请将函数定义写在此文件中。
-#ifndef f_H
-#define f_H
+#ifndef _FUNC_H
+#define _FUNC_H
 
-class lol
-{
-    public:
-        void func();
-};
+void ex();
+
 #endif
